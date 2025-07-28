@@ -103,6 +103,10 @@ crearBoton("🚔 Jailbreak", juegos, y, function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
 end)
 
+crearBoton("🚂 Rieles Muertos", juegos, y, function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRails", true))()
+end)
+
 -- Botones de utilidades
 y = 10
 crearBoton("⚙️ Infinity Yield", utilidades, y, function()
