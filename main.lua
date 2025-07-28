@@ -34,7 +34,7 @@ local Titulo = Instance.new("TextLabel")
 Titulo.Parent = Panel
 Titulo.Size = UDim2.new(1, 0, 0, 40)
 Titulo.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Titulo.Text = "🎮 Crystal Hub - Centro de Control"
+Titulo.Text = "⚓ XRNL Hub - By Sebastian"
 Titulo.TextColor3 = Color3.fromRGB(255, 255, 255)
 Titulo.Font = Enum.Font.GothamBold
 Titulo.TextSize = 18
@@ -119,17 +119,17 @@ textoCred.Size = UDim2.new(1, -20, 0, 60)
 textoCred.Position = UDim2.new(0, 10, 0, 20)
 textoCred.BackgroundTransparency = 1
 textoCred.TextColor3 = Color3.fromRGB(255, 255, 255)
-textoCred.Text = "🎉 Gracias por usar Crystal Hub\nRedes sociales:"
+textoCred.Text = "🎉 Gracias por usar XRNL Hub\nRedes sociales:"
 textoCred.Font = Enum.Font.GothamBold
 textoCred.TextSize = 15
 textoCred.TextWrapped = true
 
-crearBoton("🎵 TikTok: @Christianxddd", creditos, 100, function()
-	setclipboard("https://www.tiktok.com/@christianxddd")
+crearBoton("🎵 TikTok: @christ_sebast_7d", creditos, 100, function()
+	setclipboard("https://www.tiktok.com/@christ_sebast_7d")
 end)
 
-crearBoton("📸 Instagram: @Christianxddd", creditos, 140, function()
-	setclipboard("https://www.instagram.com/christianxddd")
+crearBoton("📸 Instagram: @Roseb_astian", creditos, 140, function()
+	setclipboard("https://www.instagram.com/roseb_astian/")
 end)
 
 -- Botones de navegación entre secciones
