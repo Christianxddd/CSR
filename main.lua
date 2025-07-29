@@ -21,6 +21,7 @@ local Panel = Instance.new("Frame")
 Panel.Name = "PanelFlotante"
 Panel.Parent = ScreenGui
 Panel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Panel.BackgroundTransparency = 0.3
 spawn(function()
 	while true do
 		for hue = 0, 1, 0.01 do
@@ -31,7 +32,7 @@ spawn(function()
 end)
 
 Panel.Position = UDim2.new(0, 100, 0.5, -100)
-Panel.Size = UDim2.new(0, 350, 0, 320)
+Panel.Size = UDim2.new(0, 400, 0, 400)
 Panel.Visible = false
 Panel.Active = true
 Panel.Draggable = true
