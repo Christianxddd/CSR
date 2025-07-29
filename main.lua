@@ -212,8 +212,7 @@ navBoton("🎮 Juegos", 5, "juegos")
 navBoton("🛠️ Utilidades", 115, "utilidades")
 navBoton("💬 Créditos", 225, "creditos")
 navBoton("❓ Otros..", 5 + 3*110, "otros") -- posición automática hacia la derecha
-navBoton("🗣️ Mine", 325, "mine")
-
+navBoton("🗣️ mine", 5 + 3*120, "mine") -- posición automática hacia la derecha
 
 -- Mostrar/Ocultar panel con clic al ícono
 local abierto = false
