@@ -101,6 +101,12 @@ otros.Size = UDim2.new(1, 0, 1, 0)
 otros.BackgroundTransparency = 1
 otros.Visible = false
 
+local mine = Instance.new("Frame")
+mine.Parent = contenido
+mine.Size = UDim2.new(1, 0, 1, 0)
+mine.BackgroundTransparency = 1
+mine.Visible = false
+
 -- Botones de juegos populares
 local y = 10
 crearBoton("🧠 Roba un brainlot", juegos, y, function()
@@ -162,8 +168,13 @@ end)
 y = y + 35
 
 crearBoton("👁️ ESP PLAYERS", otros, y, function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/wa0101/Roblox-ESP/refs/heads/main/esp.lua", true))()
+end)
+
+crearBoton("Prueba", mine, y, function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TU-USUARIO/TU-REPO/main/combate.lua"))()
 end)
+
 
 -- Botones de navegación entre secciones
 local nav = Instance.new("Frame")
@@ -178,6 +189,7 @@ local function cambiarSeccion(seccion)
 	utilidades.Visible = seccion == "utilidades"
 	creditos.Visible = seccion == "creditos"
 	otros.Visible = seccion == "otros"
+	mine.Visible = seccion == "mine"
 end
 
 local function navBoton(nombre, x, seccion)
@@ -200,6 +212,7 @@ navBoton("🎮 Juegos", 5, "juegos")
 navBoton("🛠️ Utilidades", 115, "utilidades")
 navBoton("💬 Créditos", 225, "creditos")
 navBoton("❓ Otros..", 5 + 3*110, "otros") -- posición automática hacia la derecha
+navBoton("🗣️ Mine", 225, "mine")
 
 
 -- Mostrar/Ocultar panel con clic al ícono
