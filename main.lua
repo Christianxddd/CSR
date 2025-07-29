@@ -32,7 +32,7 @@ spawn(function()
 end)
 
 Panel.Position = UDim2.new(0, 100, 0.5, -100)
-Panel.Size = UDim2.new(0, 400, 0, 400)
+Panel.Size = UDim2.new(0, 500, 0, 400)
 Panel.Visible = false
 Panel.Active = true
 Panel.Draggable = true
@@ -94,6 +94,12 @@ creditos.Parent = contenido
 creditos.Size = UDim2.new(1, 0, 1, 0)
 creditos.BackgroundTransparency = 1
 creditos.Visible = false
+
+local otros = Instance.new("Frame")
+otros.Parent = contenido
+otros.Size = UDim2.new(1, 0, 1, 0)
+otros.BackgroundTransparency = 1
+otros.Visible = false
 
 -- Botones de juegos populares
 local y = 10
@@ -158,6 +164,7 @@ local function cambiarSeccion(seccion)
 	juegos.Visible = seccion == "juegos"
 	utilidades.Visible = seccion == "utilidades"
 	creditos.Visible = seccion == "creditos"
+	pvp.Visible = seccion == "otros"
 end
 
 local function navBoton(nombre, x, seccion)
@@ -179,6 +186,8 @@ end
 navBoton("🎮 Juegos", 5, "juegos")
 navBoton("🛠️ Utilidades", 115, "utilidades")
 navBoton("💬 Créditos", 225, "creditos")
+navBoton("❓ Otros..", 5 + 3*110, "otros") -- posición automática hacia la derecha
+
 
 -- Mostrar/Ocultar panel con clic al ícono
 local abierto = false
