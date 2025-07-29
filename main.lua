@@ -133,6 +133,10 @@ crearBoton("🕊️ Volar (Fly)", utilidades, y, function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
 end)
 
+crearBoton("💀 Ghost (hub)", utilidades, y, function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+end)
+
 -- Créditos
 local textoCred = Instance.new("TextLabel", creditos)
 textoCred.Size = UDim2.new(1, -20, 0, 60)
@@ -151,18 +155,6 @@ end)
 crearBoton("📸 Instagram: @Roseb_astian", creditos, 140, function()
 	setclipboard("https://www.instagram.com/roseb_astian/")
 end)
-
--- Scripts para la sección "Otros"
-local y = 10
-
-crearBoton("🔥 Activar modo PVP", Secciones["otros"], y, function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-end)
-
-crearBoton("💣 Script Explosivo", Secciones["otros"], y + 40, function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/yourUser/scriptExplosion/main.lua"))()
-end)
-
 
 -- Botones de navegación entre secciones
 local nav = Instance.new("Frame")
