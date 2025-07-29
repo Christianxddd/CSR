@@ -152,6 +152,34 @@ crearBoton("📸 Instagram: @Roseb_astian", creditos, 140, function()
 	setclipboard("https://www.instagram.com/roseb_astian/")
 end)
 
+elseif currentSection == "otros" then
+    local y = 10
+
+    crearBoton("⚔️ Activar modo PVP", pvp, y, function()
+        print("PVP activado") -- Aquí puedes reemplazar con tu script real
+        -- Ejemplo de script real:
+        -- loadstring(game:HttpGet("https://tu-script-pvp.lua"))()
+    end)
+
+    y = y + 30
+
+    crearBoton("🔪 Kill Aura", pvp, y, function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    end)
+
+    y = y + 30
+
+    crearBoton("🧊 Congelar enemigos", pvp, y, function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yourUser/scriptCongelar/main.lua"))()
+    end)
+
+    y = y + 30
+
+    crearBoton("💣 PVP Explosivo", pvp, y, function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yourUser/scriptExplosion/main.lua"))()
+    end)
+end
+
 -- Botones de navegación entre secciones
 local nav = Instance.new("Frame")
 nav.Parent = Panel
