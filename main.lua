@@ -196,7 +196,7 @@ local function navBoton(nombre, x, seccion)
 	local b = Instance.new("TextButton")
 	b.Parent = nav
 	b.Size = UDim2.new(0, 100, 1, 0)
-	b.Position = UDim2.new(0, 0, 0, x)
+	b.Position = UDim2.new(0, x, 0, 0)
 	b.Text = nombre
 	b.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 	b.TextColor3 = Color3.fromRGB(255, 255, 255)
