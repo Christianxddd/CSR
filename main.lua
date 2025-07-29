@@ -21,6 +21,15 @@ local Panel = Instance.new("Frame")
 Panel.Name = "PanelFlotante"
 Panel.Parent = ScreenGui
 Panel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+spawn(function()
+	while true do
+		for hue = 0, 1, 0.01 do
+			Panel.BackgroundColor3 = Color3.fromHSV(hue, 1, 1)
+			wait(0.05)
+		end
+	end
+end)
+
 Panel.Position = UDim2.new(0, 100, 0.5, -100)
 Panel.Size = UDim2.new(0, 350, 0, 320)
 Panel.Visible = false
@@ -99,12 +108,12 @@ crearBoton("🍍 Blox Fruits", juegos, y, function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))()
 end) y += 35
 
-crearBoton("🚔 Jailbreak", juegos, y, function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
-end)
-
 crearBoton("🚂 Rieles Muertos", juegos, y, function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRails", true))()
+end) y += 35
+
+crearBoton("🚔 Jailbreak", juegos, y, function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
 end)
 
 -- Botones de utilidades
