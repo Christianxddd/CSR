@@ -32,7 +32,7 @@ spawn(function()
 end)
 
 Panel.Position = UDim2.new(0, 100, 0.5, -100)
-Panel.Size = UDim2.new(0, 500, 0, 400)
+Panel.Size = UDim2.new(0, 600, 0, 400)
 Panel.Visible = false
 Panel.Active = true
 Panel.Draggable = true
