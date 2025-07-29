@@ -129,12 +129,12 @@ crearBoton("⚙️ Infinity Yield", utilidades, y, function()
 	loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-TOUCH-FLING-ULTRA-POWER-30194"))()
 end) y += 35
 
-crearBoton("🕊️ Volar (Fly)", utilidades, y, function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
-end)
-
 crearBoton("💀 Ghost (hub)", utilidades, y, function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+end) y += 35
+
+crearBoton("🕊️ Volar (Fly)", utilidades, y, function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
 end)
 
 -- Créditos
@@ -155,6 +155,17 @@ end)
 crearBoton("📸 Instagram: @Roseb_astian", creditos, 140, function()
 	setclipboard("https://www.instagram.com/roseb_astian/")
 end)
+
+crearBoton("🔥 Activar modo PVP", otros, y, function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TU-USUARIO/TU-REPO/main/pvp.lua"))()
+end)
+y = y + 35
+
+crearBoton("⚔️ Modo combate", otros, y, function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TU-USUARIO/TU-REPO/main/combate.lua"))()
+end)
+y = y + 35
+
 
 -- Botones de navegación entre secciones
 local nav = Instance.new("Frame")
