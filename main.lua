@@ -164,7 +164,6 @@ y = y + 35
 crearBoton("👁️ ESP PLAYERS", otros, y, function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TU-USUARIO/TU-REPO/main/combate.lua"))()
 end)
-y = y + 35
 
 -- Botones de navegación entre secciones
 local nav = Instance.new("Frame")
