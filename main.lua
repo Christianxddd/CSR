@@ -152,6 +152,18 @@ crearBoton("📸 Instagram: @Roseb_astian", creditos, 140, function()
 	setclipboard("https://www.instagram.com/roseb_astian/")
 end)
 
+-- Scripts para la sección "Otros"
+local y = 10
+
+crearBoton("🔥 Activar modo PVP", Secciones["otros"], y, function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+crearBoton("💣 Script Explosivo", Secciones["otros"], y + 40, function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yourUser/scriptExplosion/main.lua"))()
+end)
+
+
 -- Botones de navegación entre secciones
 local nav = Instance.new("Frame")
 nav.Parent = Panel
@@ -164,7 +176,7 @@ local function cambiarSeccion(seccion)
 	juegos.Visible = seccion == "juegos"
 	utilidades.Visible = seccion == "utilidades"
 	creditos.Visible = seccion == "creditos"
-	pvp.Visible = seccion == "otros"
+	otros.Visible = seccion == "otros"
 end
 
 local function navBoton(nombre, x, seccion)
