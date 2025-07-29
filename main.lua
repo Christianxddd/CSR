@@ -156,16 +156,79 @@ crearBoton("📸 Instagram: @Roseb_astian", creditos, 140, function()
 	setclipboard("https://www.instagram.com/roseb_astian/")
 end)
 
-crearBoton("🔥 Activar modo PVP", otros, y, function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TU-USUARIO/TU-REPO/main/pvp.lua"))()
+crearBoton("🔥 Kill Aura", otros, y, function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/aYZSFAGB", true))()
 end)
 y = y + 35
 
-crearBoton("⚔️ Modo combate", otros, y, function()
+crearBoton("👁️ ESP PLAYERS", otros, y, function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TU-USUARIO/TU-REPO/main/combate.lua"))()
 end)
 y = y + 35
 
+-- Variables de estado
+local velocidadActiva = false
+local saltoActivo = false
+
+-- Variables de valores
+local velocidad = 16
+local salto = 50
+
+-- Función para actualizar valores
+local function actualizarValores()
+    local humanoid = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.WalkSpeed = velocidadActiva and velocidad or 16
+        humanoid.JumpPower = saltoActivo and salto or 50
+    end
+end
+
+-- Botón principal de VELOCIDAD
+crearBoton("🚀 Velocidad", otros, y, function()
+    velocidadActiva = not velocidadActiva
+    actualizarValores()
+end)
+
+-- Botón [+] VELOCIDAD
+crearBoton("➕ Aumentar Velocidad", otros, y, function()
+    if velocidadActiva then
+        velocidad += 2
+        actualizarValores()
+    end
+end)
+
+-- Botón [–] VELOCIDAD
+crearBoton("➖ Reducir Velocidad", otros, y, function()
+    if velocidadActiva then
+        velocidad = math.max(2, velocidad - 2)
+        actualizarValores()
+    end
+end)
+
+-- Separador visual
+crearTitulo("")
+
+-- Botón principal de SALTO
+crearBoton("🦘 Salto", otros, y, function()
+    saltoActivo = not saltoActivo
+    actualizarValores()
+end)
+
+-- Botón [+] SALTO
+crearBoton("➕ Aumentar Salto", otros, y, function()
+    if saltoActivo then
+        salto += 5
+        actualizarValores()
+    end
+end)
+
+-- Botón [–] SALTO
+crearBoton("➖ Reducir Salto", otros, y, function()
+    if saltoActivo then
+        salto = math.max(10, salto - 5)
+        actualizarValores()
+    end
+end)
 
 -- Botones de navegación entre secciones
 local nav = Instance.new("Frame")
