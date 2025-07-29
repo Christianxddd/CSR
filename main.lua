@@ -135,7 +135,7 @@ end) y += 35
 
 crearBoton("🕊️ Volar (Fly)", utilidades, y, function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
-end)
+end) y += 35
 
 -- Créditos
 local textoCred = Instance.new("TextLabel", creditos)
