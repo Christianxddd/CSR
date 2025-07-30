@@ -139,6 +139,10 @@ crearBoton("💀 Ghost (hub)", utilidades, y, function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
 end) y += 35
 
+crearBoton("😶‍🌫️ TP PLAYER)", utilidades, y, function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Christianxddd/TP/f93be6c709aeb8f246e8c1b517f32e13496e965b/main.lua"))()
+end) y += 35
+
 crearBoton("🕊️ Volar (Fly)", utilidades, y, function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
 end) y += 35
