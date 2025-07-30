@@ -143,6 +143,75 @@ crearBoton("🕊️ Volar (Fly)", utilidades, y, function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
 end) y += 35
 
+-- Teleport a jugador (prompt para ingresar nombre)
+createButton("📍 Teleport a jugador", function()
+    local plrName = game:GetService("Players"):GetPlayers()[1] and game:GetService("Players"):GetPlayers()[1].Name or ""
+    local inputGui = Instance.new("ScreenGui", game.CoreGui)
+    inputGui.Name = "TPInputGui"
+
+    local inputFrame = Instance.new("Frame", inputGui)
+    inputFrame.Size = UDim2.new(0, 300, 0, 120)
+    inputFrame.Position = UDim2.new(0.5, -150, 0.5, -60)
+    inputFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    inputFrame.BorderSizePixel = 0
+    inputFrame.Active = true
+    inputFrame.Draggable = true
+    local corner = Instance.new("UICorner", inputFrame)
+    corner.CornerRadius = UDim.new(0, 10)
+
+    local textLabel = Instance.new("TextLabel", inputFrame)
+    textLabel.Size = UDim2.new(1, -20, 0, 30)
+    textLabel.Position = UDim2.new(0, 10, 0, 10)
+    textLabel.BackgroundTransparency = 1
+    textLabel.TextColor3 = Color3.new(1,1,1)
+    textLabel.Font = Enum.Font.GothamBold
+    textLabel.TextSize = 18
+    textLabel.Text = "Ingresa el nombre del jugador"
+
+    local textBox = Instance.new("TextBox", inputFrame)
+    textBox.Size = UDim2.new(1, -20, 0, 30)
+    textBox.Position = UDim2.new(0, 10, 0, 50)
+    textBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    textBox.TextColor3 = Color3.new(1,1,1)
+    textBox.Font = Enum.Font.Gotham
+    textBox.TextSize = 18
+    textBox.Text = ""
+
+    local tpButton = Instance.new("TextButton", inputFrame)
+    tpButton.Size = UDim2.new(0.5, -15, 0, 30)
+    tpButton.Position = UDim2.new(0, 10, 0, 90)
+    tpButton.BackgroundColor3 = Color3.fromRGB(70, 130, 180)
+    tpButton.TextColor3 = Color3.new(1,1,1)
+    tpButton.Font = Enum.Font.GothamBold
+    tpButton.TextSize = 18
+    tpButton.Text = "Teleport"
+
+    local cancelButton = Instance.new("TextButton", inputFrame)
+    cancelButton.Size = UDim2.new(0.5, -15, 0, 30)
+    cancelButton.Position = UDim2.new(0.5, 5, 0, 90)
+    cancelButton.BackgroundColor3 = Color3.fromRGB(180, 70, 70)
+    cancelButton.TextColor3 = Color3.new(1,1,1)
+    cancelButton.Font = Enum.Font.GothamBold
+    cancelButton.TextSize = 18
+    cancelButton.Text = "Cancelar"
+
+    tpButton.MouseButton1Click:Connect(function()
+        local targetName = textBox.Text
+        local targetPlayer = Players:FindFirstChild(targetName)
+        if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                hrp.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0)
+            end
+        end
+        inputGui:Destroy()
+    end)
+
+    cancelButton.MouseButton1Click:Connect(function()
+        inputGui:Destroy()
+    end)
+end)
+
 -- Créditos
 local textoCred = Instance.new("TextLabel", creditos)
 textoCred.Size = UDim2.new(1, -20, 0, 60)
